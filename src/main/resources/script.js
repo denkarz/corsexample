@@ -11,6 +11,7 @@ document.getElementById ("put").addEventListener("click", function() {
     putRequest();
 } , false);
 function getRequest () {
+    axios.get()
     axios.get('http://localhost:8080/cors/get/')
         .then(response => {
             console.log(response);

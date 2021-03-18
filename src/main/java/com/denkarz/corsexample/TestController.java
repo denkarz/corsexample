@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
     @GetMapping("/get/")
     public ResponseEntity<Object> getMethod(){
-        return new ResponseEntity<>("Get method",HttpStatus.OK);
+        return new ResponseEntity<>(new TestLog("Get", "ok"),HttpStatus.OK);
     }
 
     @PostMapping("/post/")
     public ResponseEntity<Object> postMethod(){
-        return new ResponseEntity<>("Post method",HttpStatus.OK);
+        return new ResponseEntity<>(new TestLog("Post", "ok"),HttpStatus.OK);
     }
 
     @PutMapping("/put/")
